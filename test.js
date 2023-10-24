@@ -1,13 +1,14 @@
-const x = 10;
-const y = 15
+require("dotenv/config");
+
+function test(expectedSecret) {
+
+const variable = process.env.MEANING_OF_LIFE;
 
 
-function test(){
-  if(x == y){  
-  console.log("test running, no issues")
-  } else {
-    throw new Error("numbers are not equal")
-}
+    const secretMatches = process.env.MEANING_OF_LIFE == expectedSecret;
+    console.log(`The meaning of life is ${process.env.MEANING_OF_LIFE}`);
+    console.log(`The secret does${secretMatches ? "" : " not"} match!`);
+    return secretMatches;
   }
-
-test();
+  
+  test(42)
