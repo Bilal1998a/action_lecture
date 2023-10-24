@@ -35,6 +35,5 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-
-        - name: read a file
-          run: cat readme.md
+      - name: read a file
+        run: cat readme.md
